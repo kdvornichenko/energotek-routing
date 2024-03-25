@@ -1,0 +1,68 @@
+.block
+    position: relative
+    display: block
+    width: 100%
+    border-radius: 12px
+    background-color: $l-bg-color
+    padding: 2px 2px 2px 36px
+    .dark &
+        background-color: #2E2A3A
+
+.block__icon
+    position: absolute
+    left: 10px
+    top: calc(50% - 8px)
+    width: 16px
+    height: 16px
+    color: $text-color
+    .dark &
+        color: $primary
+
+.block__content
+    font-size: 12px
+    line-height: 16px
+    color: $text-color
+    b
+        +sans(m)
+    .bold
+        +sans(lg)
+    .ttu
+        font-size: 14px
+        line-height: 18px
+        text-transform: uppercase
+        +sans(m)
+    a
+        +link($text-color)
+
+.block__item-content
+    position: relative
+    margin-top: 2px
+    display: flex
+    flex-direction: column
+    row-gap: 4px
+    padding: 10px 12px
+    &:first-child
+        margin-top: 0
+
+.block__item-content--bg
+    border-radius: 12px
+    background-color: $bg-color
+    .dark &
+        background-color: $l-bg-color
+
+.block__item-content--link
+    cursor: pointer
+    padding-right: 44px
+
+.block__item-icon
+    position: absolute
+    top: 10px
+    right: 12px
+    width: 20px
+    height: 20px
+
+.block__item-row
+    display: flex
+    & > *:first-child
+        width: 90px
+        flex-shrink: 0

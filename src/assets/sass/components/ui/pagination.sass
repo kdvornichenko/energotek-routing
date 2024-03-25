@@ -1,0 +1,25 @@
+.pagination
+    margin-top: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    column-gap: 8px
+
+.pagination__page
+    span
+        display: block
+        padding: 8px 12px
+        color: $text-color
+        +sans(m)
+        transition: $trs
+    &.is-active
+        span
+            color: $primary
+    svg
+        color: $text-color
+        width: 18px
+        height: 18px
+        transform: rotate(90deg)
+    &:last-child
+        svg
+            transform: rotate(-90deg)

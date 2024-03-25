@@ -1,0 +1,50 @@
+.loader 
+  width: 100%
+  padding: 80px 0
+
+  .lds-ellipsis 
+    margin: 0 auto
+    position: relative
+    transform: translateY(-50%)
+    width: 100px
+    text-align: center
+    span 
+      display: inline-block
+      width: 12px
+      height: 12px
+      margin: 0 6px
+      border-radius: 50%
+      background-color: $text-color
+      opacity: .7
+      transition: $trs
+      animation: ball-pulse-sync 1s 0s infinite ease-in-out
+      &:nth-child(1) 
+        animation: ball-pulse-sync 1s -0.14s infinite ease-in-out
+      &:nth-child(2) 
+        animation: ball-pulse-sync 1s -70ms infinite ease-in-out
+        
+.is-loading
+  pointer-events: none
+  * 
+    pointer-events: none !important
+  
+  .loader
+    opacity: 1
+    pointer-events: auto
+
+body.is-loading
+  .loader
+    position: fixed
+
+@keyframes ball-pulse-sync
+  33%
+    opacity: 1
+    transform: translateY(10px)  
+
+  66% 
+    opacity: 0
+    transform: translateY(-10px)  
+
+  100% 
+    opacity: 1
+    transform: translateY(0)

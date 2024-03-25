@@ -1,0 +1,96 @@
+.header
+  width: 100%
+  padding-top: 20px
+  padding-bottom: 20px
+  display: flex
+  align-items: center
+
+.header__pagename
+  +sans(b)
+  font-size: 22px
+  line-height: 120%
+  letter-spacing: 0.02em
+
+.header__crumbs
+  display: flex
+  a
+    color: $text-color
+    display: flex
+    align-items: center
+    column-gap: 11px
+    span
+      font-size: 16px
+      letter-spacing: 0.02em
+    svg
+      width: 20px
+      height: 20px
+      transform: rotate(90deg)
+
+.header__burger-btn
+  margin-left: auto
+  flex-shrink: 0
+  background-color: $l-bg-color
+  svg
+    width: 26px
+    height: 26px
+
+.header__burger
+  position: relative
+  width: 100%
+  height: auto
+  padding-top: 20px
+  padding-bottom: 28px
+  background-color: $bg-color
+  border-radius: 0 0 20px 20px
+  z-index: 1
+  .dark &
+    background-color: $l-bg-color
+
+.header__burger-close
+  position: absolute
+  top: 15px
+  right: $unit
+  background-color: $l-bg-color
+  .dark &
+    background-color: $bg-color
+  svg
+    width: 24px
+    height: 24px
+
+.header__user
+  max-width: calc(100% - 44px)
+  display: flex
+  align-items: center
+  column-gap: 14px
+  svg
+    flex-shrink: 0
+    width: 24px
+    height: 24px
+    color: $primary
+  span
+    +sans(m)
+    font-size: 18px
+    line-height: 120%
+
+.header__theme-btn
+  margin-top: 40px
+  max-width: 335px
+  width: 100%
+  display: flex
+  align-items: center
+  column-gap: 12px
+  svg
+    width: 22px
+    height: 22px
+    color: $text-color
+    .dark &
+      color: #CEC9D9
+
+.header__logout
+  margin-top: 88px
+  svg
+    width: 24px
+    height: 24px
+    .dark &
+      color: #CEC9D9
+  

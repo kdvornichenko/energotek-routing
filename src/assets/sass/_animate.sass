@@ -1,0 +1,20 @@
+// Vue transitions
+.translateToBottom-enter-active, .translateToBottom-leave-active,
+.translateToRight-enter-active, .translateToRight-leave-active,
+.fade-enter-active, .fade-leave-active
+  transition: $trs-4
+
+.translateToLeft-enter-active, .translateToLeft-leave-active
+  transition: $trs
+
+.translateToBottom-enter-from, .translateToBottom-leave-to
+  transform: translateY(-120%)
+
+.translateToRight-enter-from, .translateToRight-leave-to
+  transform: translateX(-120%)
+
+.translateToLeft-enter-from, .translateToLeft-leave-to
+  transform: translateX(120%)
+
+.fade-enter-from, .fade-leave-to
+  opacity: 0

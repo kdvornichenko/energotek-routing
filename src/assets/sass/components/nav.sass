@@ -1,0 +1,31 @@
+.nav
+    margin-top: auto
+    position: sticky
+    bottom: 0
+    border-radius: 20px 20px 0 0
+    background-color: $text-color
+    padding-top: 18px
+    padding-bottom: 14px
+    display: flex
+    justify-content: space-between
+    .dark &
+        background-color: #2E2A3A
+
+.nav__link
+    display: flex
+    flex-direction: column
+    align-items: center
+    row-gap: 9px
+    svg
+        width: 22px
+        height: 22px
+        color: #CEC9D9
+        transition: $trs-4
+    span
+        font-size: 11px
+        line-height: 120%
+        color: #938EA0
+        transition: $trs-4
+    &.is-active
+        span, svg
+            color: $primary

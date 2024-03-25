@@ -1,0 +1,40 @@
+.contact-card
+    display: block
+    width: 100%
+    background-color: $l-bg-color
+    padding: 5px 4px
+    border-radius: 12px
+    color: $text-color
+    .dark &
+        background-color: #2E2A3A
+
+.contact-card__main
+    padding: 14px
+
+.contact-card__name
+    +sans(m)
+    font-size: 15px
+
+.contact-card__role
+    margin-top: 8px
+    font-size: 12px
+    line-height: 1
+
+.contact-card__desc
+    margin-top: 4px
+    padding: 10px 14px 12px
+    border-radius: 10px
+    background-color: $bg-color
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+    font-size: 12px
+    line-height: 1
+    color: $text-color
+    .dark &
+        background-color: $l-bg-color
+    a
+        +link($text-color)
+    .ttu
+        text-transform: uppercase
+            

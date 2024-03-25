@@ -1,0 +1,71 @@
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  column-gap: 10px
+  .btn__text
+    +sans
+    font-size: 16px
+    line-height: 140%
+    letter-spacing: 0.02em
+    color: $text-color
+  svg
+    width: 20px
+    height: 20px
+    color: $text-color
+
+.btn--primary
+  background-color: $red
+  width: 100%
+  padding: 12px 20px
+  border-radius: 12px
+  .btn__text, svg
+    color: $white
+
+.btn--icon
+  width: 36px
+  height: 36px
+  border-radius: 12px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  svg
+    width: 20px
+    height: 20px
+
+// .btn--plus
+//   position: relative
+//   &::before,
+//   &::after
+//     content: ''
+//     display: block
+//     position: absolute
+//     top: calc(50% - 1px)
+//     left: calc(50% - 5px)
+//     width: 10px
+//     height: 2px
+//     background-color: $white
+//   &::after
+//     transform-origin: center
+//     transform: rotate(90deg)
+
+// .btn--close
+//   position: relative
+//   background-color: transparent
+//   &::before,
+//   &::after
+//     content: ''
+//     display: block
+//     position: absolute
+//     top: calc(50% - 1px)
+//     left: calc(50% - 7px)
+//     width: 14px
+//     height: 2px
+//     background-color: $black
+//     transform-origin: center
+//   &::before
+//     transform: rotate(45deg)
+//   &::after
+//     transform: rotate(135deg)
+  

@@ -1,0 +1,40 @@
+.search
+    input
+        padding: 12px 44px 12px 45px
+        border-radius: 12px
+        color: $text-color
+        +sans
+        font-size: 14px
+        line-height: 1
+        letter-spacing: 0.04em
+        &::placeholder
+            color: $text-color
+            opacity: .25
+        .dark &
+            &::placeholder
+                color: #D9D8DD
+                opacity: .5
+
+.search__icon
+    width: 18px
+    height: 18px
+    position: absolute
+    top: calc(50% - 9px)
+    left: 15px
+    color: #918D9D
+    pointer-events: none
+    .dark &
+        color: #D5D0E3
+
+.search__btn-reset
+    position: absolute
+    right: 9px
+    top: calc(50% - 13px)
+    width: 26px
+    height: 26px
+    border-radius: 8px
+    background-color: $black
+    svg
+        width: 18px
+        height: 18px
+        color: $white

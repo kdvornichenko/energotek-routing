@@ -1,0 +1,65 @@
+.project-card
+    display: block
+    width: 100%
+    background-color: $l-bg-color
+    padding: 5px 4px
+    border-radius: 12px
+    color: $text-color
+    .dark &
+        background-color: #2E2A3A
+
+.project-card__name
+    +sans(m)
+    font-size: 15px
+    padding: 14px
+
+.project-card__row
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 5px
+
+.project-card__status,
+.project-card__price
+    display: flex
+    align-items: center
+    column-gap: 10px
+    padding: 12px 14px
+    border-radius: 10px
+    background-color: $bg-color
+    svg
+        width: 12px
+        height: 12px
+        color: $text-color
+    span
+        +sans(b)
+        font-size: 12px
+    .dark &
+        background-color: $l-bg-color
+
+.project-card__place
+    margin-top: 4px
+    padding: 10px 14px 12px
+    border-radius: 10px
+    background-color: $bg-color
+    .dark &
+        background-color: $l-bg-color
+
+.project-card__city,
+.project-card__author
+    display: block
+    +sans(b)
+    font-size: 12px
+    line-height: 1
+
+.project-card__region
+    display: block
+    margin-top: 2px
+    font-size: 11px
+    line-height: 120%
+    letter-spacing: 0.02em
+    .dark &
+        opacity: .75
+
+.project-card__city ~ .project-card__author
+    margin-top: 12px
+            

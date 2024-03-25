@@ -1,0 +1,49 @@
+.document-card
+    display: block
+    width: 100%
+    background-color: $l-bg-color
+    padding: 5px 4px
+    border-radius: 12px
+    color: $text-color
+    .dark &
+        background-color: #2E2A3A
+    a
+        display: block
+        +link($text-color)
+
+.document-card__main
+    cursor: pointer
+    padding: 14px
+
+.document-card__number
+    +sans(m)
+    font-size: 15px
+
+.document-card__date
+    margin-top: 8px
+    font-size: 12px
+    line-height: 1
+
+.document-card__project
+    b
+        line-height: 1.4
+        font-size: 14px
+
+.document-card__desc
+    margin-top: 4px
+    padding: 10px 14px 12px
+    border-radius: 10px
+    background-color: $bg-color
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+    font-size: 12px
+    line-height: 1
+    color: $text-color
+    .dark &
+        background-color: $l-bg-color
+    a
+        +link($text-color)
+    .ttu
+        text-transform: uppercase
+            

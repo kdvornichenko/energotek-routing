@@ -1,0 +1,31 @@
+body
+  text-rendering: optimizeLegibility
+
+  display: flex
+  flex-direction: columnmain
+  
+  &.light
+    --bg-color: #fff
+    --l-bg-color: #F1F3F7
+    --text-color: #201D2A
+    --primary: #ED1C24
+  
+  &.dark
+    --bg-color: #201D2A
+    --l-bg-color: #423D54
+    --text-color: #fff
+    --primary: #ED1C24
+
+body.no-scroll
+  overflow: hidden
+  width: 100%
+  position: fixed
+
+html
+  height: 100%
+
+body
+  min-height: 100%
+
+#app
+  display: contents

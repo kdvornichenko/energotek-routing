@@ -1,0 +1,90 @@
+// Обязательные стили
+.select
+    position: relative
+    &.select--open
+        .select__btn-arrow
+            transform: rotate(180deg)
+    .select__content
+        position: absolute
+        top: 100%
+        min-width: 100%
+        overflow: hidden
+        transition: $trs
+        z-index: 2
+    .select__option
+        input
+            display: none
+        label
+            display: block
+            cursor: pointer
+    .select__btn
+        svg
+            fill: none
+            transition: $trs
+
+    
+// COMMON
+.select--common
+    width: 100%
+    .select__btn
+        width: 100%
+        display: flex
+        align-items: center
+        gap: 7px
+        cursor: pointer
+        height: 36px
+        padding: 8px 20px
+        border: 1px solid #DEE2EA
+        border-radius: 12px
+        color: $text-color
+        .dark &
+            border: 1px solid #CEC9D9
+            color: #CEC9D9
+
+        .select__btn-icon
+            width: 20px
+            height: 20px
+        .select__btn-text
+            display: flex
+            align-items: center
+            column-gap: 4px
+            font-size: 13px
+            +sans(m)
+            svg
+                width: 16px
+                height: 16px
+                order: 1
+        .select__btn-arrow
+            margin-left: auto
+            width: 18px
+            height: 18px
+  
+    .select__content
+        top: calc(100% + 8px)
+        box-shadow: 0px 10px 20px rgba($black, .16)
+
+    .select__content-inner
+        padding: 30px 20px
+        border-radius: 12px
+        background-color: $bg-color
+        box-shadow: 0px 10px 20px rgba($black, .16)
+        .dark &
+            background-color: $l-bg-color
+
+    .select__option
+        margin-top: 20px
+        &:first-child
+            margin-top: 0
+
+        label
+            display: flex
+            align-items: center
+            column-gap: 6px
+            position: relative
+            width: fit-content
+            font-size: 16px
+            line-height: 110%
+            svg
+                width: 16px
+                height: 16px
+                order: 1

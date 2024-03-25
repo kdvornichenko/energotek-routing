@@ -1,0 +1,157 @@
+.main
+    flex-grow: 1
+    +sans(r)
+    font-size: 15px
+    line-height: $base-lh
+    color: $base-text-color
+    background-color: $bg-color
+    display: flex
+    flex-direction: column
+
+.main__content
+    padding-bottom: 20px
+
+.main__search
+    margin-bottom: 16px
+    
+.main__sort
+    margin-top: 16px
+    
+.main__list
+    margin-top: 8px
+
+.main__list-item
+    margin-top: 20px
+    &:first-child
+        margin-top: 0
+
+.main__tabs
+    margin-bottom: 20px
+    display: flex
+    column-gap: 16px
+
+.main__tab
+    height: 40px
+    flex-grow: 1
+    border-radius: 12px
+    border: 1px solid #DEE2EA
+    transition: $trs
+    .dark &
+        border: 1px solid #CEC9D9
+    &:hover, &.is-active
+        background-color: $l-bg-color
+        border: 1px solid $l-bg-color
+        .dark &
+            background-color: #2E2A3A
+            border: 1px solid #2E2A3A
+
+// Card
+div.main__card-el
+    padding: 0
+    background-color: transparent
+    .dark &
+        background-color: transparent
+
+    .project-card__name,
+    .partner-card__main,
+    .contact-card__main
+        padding-top: 0
+        padding-left: 0
+        padding-right: 42px
+
+    .project-card__status,
+    .project-card__price,
+    .project-card__place,
+    .partner-card__desc,
+    .contact-card__desc
+        background-color: $l-bg-color
+        .dark &
+            background-color: #2E2A3A
+
+.main__card-tabs
+    width: 100vw
+    margin-top: 20px
+    margin-left: calc(var(--unit) * -1)
+    margin-right: calc(var(--unit) * -1)
+    overflow-x: auto
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        height: 0
+
+.main__card-tabs-inner
+    padding-left: $unit
+    width: fit-content
+    min-width: 100%
+    display: flex
+    column-gap: 4px
+
+.main__card-tab-btn
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    min-width: 90px
+    height: 90px
+    border-radius: 12px
+    border: 1px solid $l-bg-color
+    padding: 8px
+    transition: $trs-4
+    &:last-child
+        margin-right: $unit
+
+    &.is-active
+        background-color: $text-color
+        border: 1px solid $text-color
+        .dark &
+            background-color: $primary
+            border: 1px solid $primary
+
+        .main__card-tab-btn-icon
+            background-color: #413E4D
+            .dark &
+                background-color: rgba($white, .25)
+
+        .main__card-tab-btn-icon svg,
+        .main__card-tab-btn-text
+            color: $white
+
+.main__card-tab-btn-icon
+    width: 28px
+    height: 28px
+    border-radius: 100%
+    background-color: $l-bg-color
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: $trs-4
+    svg
+        width: 18px
+        height: 18px
+        color: $text-color
+        transition: $trs-4
+
+.main__card-tab-btn-text
+    +sans(m)
+    font-size: 11px
+    line-height: 110%
+    letter-spacing: 0.02em
+    color: $text-color
+    text-align: left
+    transition: $trs-4
+
+.main__card-add-btn
+    margin-top: 20px
+    background-color: $text-color
+    .dark &
+        background-color: #555065
+    .btn__text, svg
+        color: $white
+
+.main__card-tabs-content
+    margin-top: 14px
+
+.main__card-tabs-content-item
+    margin-top: 14px
+    &:first-child
+        margin-top: 0
+    
