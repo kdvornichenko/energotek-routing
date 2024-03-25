@@ -7,7 +7,7 @@
     "index-rm": "rimraf ./public/index.html",
     "assets-rm": "rimraf ./public/assets",
     "dev": "vite",
-    "build": "yarn assets-rm && vite build --base=/",
+    "build": "yarn assets-rm && vite build",
     "deploy": "yarn assets-rm && vite build && vercel --prod",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"

@@ -10,7 +10,6 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: './',
-  base: '/',
   build: {
     emptyOutDir: false,
     outDir: 'public',
