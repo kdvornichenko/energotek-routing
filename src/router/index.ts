@@ -61,7 +61,7 @@ const router = createRouter({
       component: Login,
     },
     {
-      path: '/:pathMatch(.*)*', 
+      path: '/:pathMatch(.*)*',
       component: () => import('../views/PageNotFound.vue'),
       meta: { requiresAuth: true }
     }
