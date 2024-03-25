@@ -2,11 +2,12 @@
   "name": "community",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://energotek-routing.vercel.app/",
   "scripts": {
     "index-rm": "rimraf ./public/index.html",
     "assets-rm": "rimraf ./public/assets",
     "dev": "vite",
-    "build": "yarn assets-rm && vite build",
+    "build": "yarn assets-rm && vite build --base=/",
     "deploy": "yarn assets-rm && vite build && vercel --prod",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
