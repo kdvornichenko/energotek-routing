@@ -6,6 +6,8 @@ import vue from '@vitejs/plugin-vue'
 import { VitePluginFonts } from 'vite-plugin-fonts'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
+import { resolve } from 'path'
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +16,9 @@ export default defineConfig({
     emptyOutDir: false,
     outDir: 'public',
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
@@ -28,9 +33,9 @@ export default defineConfig({
       custom: {
         families: [
           {
-          name: 'Google Sans',
-          local: 'Google Sans',
-          src: './src/assets/fonts/sans/*\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/',
+            name: 'Google Sans',
+            local: 'Google Sans',
+            src: './src/assets/fonts/sans/*\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/',
           },
         ],
         display: 'auto',
@@ -60,16 +65,16 @@ export default defineConfig({
           {
             name: 'removeAttrs',
             params: {
-                attrs: ['width', 'height'],
+              attrs: ['width', 'height'],
             }
           },
           {
             name: 'removeTitle',
           },
-          { 
+          {
             name: 'convertColors',
             params: {
-                currentColor: true
+              currentColor: true
             },
           }
         ]
